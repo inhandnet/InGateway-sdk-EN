@@ -555,15 +555,15 @@ To install a third-party dependency library to SDK, you need to enable the debug
   pip install xlrd==1.2.0 --user
   ```
   
-  ![](images/2020-05-12-09-50-16.png)
+  ![](images/2020-05-26-19-36-43.png)
 
 - Step 3: Then, the dependency library is automatically downloaded and installed. After the library is installed, the following figure is displayed:
   
-  ![](images/2020-05-12-09-51-17.png)
+  ![](images/2020-05-26-19-38-39.png)
 
 - Step 4: Run the code to check whether the App runs normally.
   
-  ![](images/2020-05-12-09-52-36.png)
+  ![](images/2020-05-26-19-40-02.png)
 
 <font color=#FF0000>Note: After the third-party dependency library is installed in this way, if the App release package is imported to another MobiusPi project on which the third-party dependency library required for running this App is not installed to SDK, this App may cannot run.</font>
 
