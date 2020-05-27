@@ -101,7 +101,7 @@ If your MobiusPi and PC have met all the above items, skip this section. Otherwi
 
 #### 1.1.3 Configure the WAN parameters
 
-- Configure the IG501 WAN parameters by referring to [Connect IG501 to the Internet](https://ingateway-firmware-en.readthedocs.io/en/latest/IG501-Quick-Start-Manual.html#set-wan-parameters-connect-ig500-to-the-internet).
+- Configure the IG501 WAN parameters by referring to [Connect IG501 to the Internet](https://ingateway-firmware-en.readthedocs.io/en/latest/IG501-Quick-Start-Manual.html#set-wan-parameters-connect-ig501-to-the-internet).
 - Configure the IG902 WAN parameters by referring to [Connect IG902 to the Internet](https://ingateway-firmware-en.readthedocs.io/en/latest/IG902-Quick-Start-Manual.html#set-wan-parameters-connect-ig902-to-the-internet).
 
 <a id="update-the-software-version"> </a>  
