@@ -94,15 +94,15 @@ If your MobiusPi and PC have met all the above items, skip this section. Otherwi
 
 #### 1.1.2 Configure the LAN parameters
 
-- Configure the IG501 LAN parameters by referring to [Access IG501 in a LAN](https://ingateway-development-docs.readthedocs.io/zh_CN/latest/IG501%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html#lan-ig501).
-- Configure the IG902 LAN parameters by referring to [Access IG902 in a LAN](https://ingateway-development-docs.readthedocs.io/zh_CN/latest/IG902%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html#lan-ig902).
+- Configure the IG501 LAN parameters by referring to [Access IG501 in a LAN](https://ingateway-firmware-en.readthedocs.io/en/latest/IG501-Quick-Start-Manual.html#set-lan-parameters-access-the-ig501-through-lan).
+- Configure the IG902 LAN parameters by referring to [Access IG902 in a LAN](https://ingateway-firmware-en.readthedocs.io/en/latest/IG902-Quick-Start-Manual.html#set-lan-parameters-access-the-ig902-through-lan).
 
 <a id="configure-the-wan-parameters"> </a>  
 
 #### 1.1.3 Configure the WAN parameters
 
-- Configure the IG501 WAN parameters by referring to [Connect IG501 to the Internet](https://ingateway-development-docs.readthedocs.io/zh_CN/latest/IG501%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html#wan-internet).
-- Configure the IG902 WAN parameters by referring to [Connect IG902 to the Internet](https://ingateway-development-docs.readthedocs.io/zh_CN/latest/IG902%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html#wan-internet).
+- Configure the IG501 WAN parameters by referring to [Connect IG501 to the Internet](https://ingateway-firmware-en.readthedocs.io/en/latest/IG501-Quick-Start-Manual.html#set-wan-parameters-connect-ig500-to-the-internet).
+- Configure the IG902 WAN parameters by referring to [Connect IG902 to the Internet](https://ingateway-firmware-en.readthedocs.io/en/latest/IG902-Quick-Start-Manual.html#set-wan-parameters-connect-ig902-to-the-internet).
 
 <a id="update-the-software-version"> </a>  
 
@@ -110,8 +110,8 @@ If your MobiusPi and PC have met all the above items, skip this section. Otherwi
 
 If you want to get the latest MobiusPi and its functional characteristics, contact Customer Services. To update the software version, see the following links:
 
-- [Update the IG501 software version](https://ingateway-development-docs.readthedocs.io/zh_CN/latest/IG501%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html#id1)
-- [Update the IG902 software version](https://ingateway-development-docs.readthedocs.io/zh_CN/latest/IG501%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html#id1)
+- [Update the IG501 software version](https://ingateway-firmware-en.readthedocs.io/en/latest/IG501-Quick-Start-Manual.html#update-the-software)
+- [Update the IG902 software version](https://ingateway-firmware-en.readthedocs.io/en/latest/IG902-Quick-Start-Manual.html#update-the-software)
 
 <a id="enable-the-debugging-mode-for-mobiuspi"> </a>  
 
@@ -119,8 +119,8 @@ If you want to get the latest MobiusPi and its functional characteristics, conta
 
 To run and debug Python code on MobiusPi during development, you need to enable the debugging mode for MobiusPi.
 
-- [Enable the IG501 debugging mode](https://ingateway-development-docs.readthedocs.io/zh_CN/latest/IG501%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html#id3)
-- [Enable the IG902 debugging mode](https://ingateway-development-docs.readthedocs.io/zh_CN/latest/IG501%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html#id3)
+- [Enable the IG501 debugging mode](https://ingateway-firmware-en.readthedocs.io/en/latest/IG501-Quick-Start-Manual.html#enable-the-debug-mode)
+- [Enable the IG902 debugging mode](https://ingateway-firmware-en.readthedocs.io/en/latest/IG902-Quick-Start-Manual.html#enable-the-debug-mode)
 
 <a id="install-required-software-on-the-pc"> </a>  
 
@@ -449,8 +449,8 @@ After debugging, you can build an App release package to quickly deploy the App 
 
 Run the `main.py` script. Or, after the App release package is built, the App is automatically generated on the connected MobiusPi, but this App cannot be started. Refer to the following links to deploy the App to MobiusPi:
 
-- [Deploy an App on IG501](https://ingateway-development-docs.readthedocs.io/zh_CN/latest/IG501%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html#python-app)
-- [Deploy an App on IG902](https://ingateway-development-docs.readthedocs.io/zh_CN/latest/IG501%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html#python-app)
+- [Deploy an App on IG501](https://ingateway-firmware-en.readthedocs.io/en/latest/IG501-Quick-Start-Manual.html#install-and-run-python-app)
+- [Deploy an App on IG902](https://ingateway-firmware-en.readthedocs.io/en/latest/IG902-Quick-Start-Manual.html#install-and-run-python-app)
 
 <a id="view-the-app-running-status"> </a>  
 
