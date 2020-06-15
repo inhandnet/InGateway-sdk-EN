@@ -529,7 +529,7 @@ To install a third-party dependency library for the specified App, you need to e
   
   ![](images/2020-05-26-11-16-41.png)
   
-  After the third-party dependency library is installed for the specified App, you must configure a corresponding environment variable before debugging this App; otherwise, this App cannot run during debugging. When multiple third-party dependency libraries are installed, you just need to add the environment variable once. After an SFTP connection is created again, you need to configure the environment variable again. When the App is started in MobiusPi, the environment variable of the third-party dependency library is automatically added to the App's lib folder.
+  After the third-party dependency library is installed for the specified App, you must configure a corresponding environment variable before debugging this App; otherwise, this App cannot run during debugging. When multiple third-party dependency libraries are installed, you just need to add the environment variable once. After an SFTP connection is created again, you need to configure the environment variable again. When the App is started in MobiusPi, the environment variable of the third-party dependency library is automatically added to the App's lib folder.<font color=#FF0000>(This method is mainly used for third-party dependent libraries where the App needs to install a special version)</font>  
 
 - Step 5: Run the code to check whether the App runs normally.
   
@@ -565,7 +565,7 @@ To install a third-party dependency library to SDK, you need to enable the debug
   
   ![](images/2020-05-26-19-40-02.png)
 
-<font color=#FF0000>Note: After the third-party dependency library is installed in this way, if the App release package is imported to another MobiusPi project on which the third-party dependency library required for running this App is not installed to SDK, this App may cannot run.</font>
+<font color=#FF0000>Note: When using this method to install a third-party dependency library, the packaged App release package will be automatically installed into the MobiusPi when it is deployed on other MobiusPi.</font>
 
 <a id="enable-automatic-code-completion"> </a>  
 
