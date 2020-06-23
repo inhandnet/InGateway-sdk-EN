@@ -63,7 +63,7 @@ MobiusPi is the secondary development platform for the InGateway series product.
 
 ## Installation
 
-InHand Networks provides the software development kit (SDK) that includes the `mobiuspi_lib` library. Please contact our customer services if you want to obtain MobiusPi's SDK and its feature information. For more information about how to install and upgrade the SDK, see [IG902 Updated Software Versions.](http://fw.ig.inhand.com.cn/zh_CN/latest/IG902%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html#id1)
+InHand Networks provides the software development kit (SDK) that includes the `mobiuspi_lib` library. Please contact our customer services if you want to obtain MobiusPi's SDK and its feature information. For more information about how to install and upgrade the SDK, see [IG902 Updated Software Versions.](http://manual.ig.inhand.com.cn/zh_CN/latest/IG902%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html#id1)
 
 <a id="python-requirements"> </a>
 
