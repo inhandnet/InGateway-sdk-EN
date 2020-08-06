@@ -36,7 +36,7 @@ The InGateway series of Beijing InHand Networks Technology Co., Ltd. (InHand) co
   - [FAQ](#faq)
     - [During SFTP connection building, it prompts "REMOTE HOST IDENTIFICATION HAS CHANGED and Host key verification failed"](#remote-host-id-update)
     - [When synchronizing the code to the remote server, it prompts "All configured authentication methods failed"](#the-configured-authentication-method-failed)
-    - [How to call the serial port and network port of IG902 during development](#how-to-call-the-serial-port-and-network-port-of-ig900)
+    - [How to call the serial port and network port of MobiusPi](#how-to-call-the-serial-port-and-network-port-of-ig900)
     - [When creating an SFTP connection with MobiusPi, it prompts "SSH error"](#ssh-error-when-setting-up-sftp-connection-with-mobiuspi)
 
 <a id="build-a-mobiuspi-development-environment"> </a>  
@@ -602,7 +602,7 @@ To improve the encoding efficiency, you can implement automatic code completion 
 
 - [During SFTP connection building, it prompts "REMOTE HOST IDENTIFICATION HAS CHANGED and Host key verification failed"](#remote-host-id-update)
 - [When synchronizing the code to the remote server, it prompts "All configured authentication methods failed"](#the-configured-authentication-method-failed)
-- [How to call the serial port and network port of IG902 during development](#how-to-call-the-serial-port-and-network-port-of-ig900)
+- [How to call the serial port and network port of MobiusPi](#how-to-call-the-serial-port-and-network-port-of-ig900)
 - [When creating an SFTP connection with MobiusPi, it prompts "SSH error"](#ssh-error-when-setting-up-sftp-connection-with-mobiuspi)
 
 <a id="remote-host-id-update"> </a>
@@ -629,9 +629,9 @@ To improve the encoding efficiency, you can implement automatic code completion 
 
 <a id="how-to-call-the-serial-port-and-network-port-of-ig900"> </a>
 
-### Q3: How to call the serial port and network port of IG902 during development?
+### Q3: How to call the serial port and network port of MobiusPi?
   
-  A3: The RS485 serial port name is `/dev/ttyO3` and the RS232 serial port name is `/dev/ttyO1`. The serial port and network port can be called with the standard Python serial port/network port usage. For example, use the `pyserial` library to call the serial port.
+  A3: The RS485 serial port name of IG902 is `/dev/ttyO3` and the RS232 serial port name is `/dev/ttyO1`; The RS485 serial port name of IG501 is `/dev/ttyO1` and the RS232 serial port name is `/dev/ttyO5`. The serial port and network port can be called with the standard Python serial port/network port usage. For example, use the `pyserial` library to call the serial port.
 
 <a id="ssh-error-when-setting-up-sftp-connection-with-mobiuspi"> </a>
 
