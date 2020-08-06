@@ -5,11 +5,11 @@ The InGateway series of Beijing InHand Networks Technology Co., Ltd. (InHand) co
   - [1. Build a MobiusPi development environment](#build-a-mobiuspi-development-environment)
     - [1.1 Prepare the hardware and network environment](#prepare-the-hardware-and-network-environment)
       - [1.1.1 Connect the power supply and use a network cable to connect the platform to the PC](#connect-the-power-supply-and-use-a-network-cable-to-connect-the-platform-to-the-pc)
-      - [1.1.2 Configure the LAN parameters](#configure-the-lan-parameters)
-      - [1.1.3 Configure the WAN parameters](#configure-the-wan-parameters)
+      - [1.1.2 Acess the MobiusPi](#configure-the-lan-parameters)
+      - [1.1.3 Connect MobiusPi to the Internet](#configure-the-wan-parameters)
       - [1.1.4 Update the software version](#update-the-software-version)
       - [1.1.5 Enable the debugging mode for MobiusPi](#enable-the-debugging-mode-for-mobiuspi)
-    - [1.2 Install required software on the PC](#install-required-software-on-the-pc)
+    - [1.2 Prepare the PC environment](#install-required-software-on-the-pc)
       - [1.2.1 Install the Python interpreter](#install-the-python-interpreter)
       - [1.2.2 Install Visual Studio Code](#install-visual-studio-code)
       - [1.2.3 Install OpenSSH](#install-openssh)
@@ -19,7 +19,7 @@ The InGateway series of Beijing InHand Networks Technology Co., Ltd. (InHand) co
       - [1.3.3 Configure the project template](#configure-the-project-template)
         - [1.3.3.1 Apply the InHand standard project template](#apply-the-inhand-standard-project-template)
         - [1.3.3.2 Custom project template](#custom-project-template)
-  - [2. Compile the first MobiusPi App: Hello World](#compile-the-first-mobiuspi-app-hello-world)
+  - [2. Compile the MobiusPi App: Hello World](#compile-the-first-mobiuspi-app-hello-world)
     - [2.1 Use a template to create a project](#use-a-template-to-create-a-project)
     - [2.2 Encoding](#encoding)
     - [2.3 Debugging](#debugging)
@@ -34,6 +34,10 @@ The InGateway series of Beijing InHand Networks Technology Co., Ltd. (InHand) co
       - [2.8.2 Install the third-party dependency library to SDK](#install-the-third-party-dependency-library-to-sdk)
       - [2.8.3 Enable automatic code completion](#enable-automatic-code-completion)
   - [FAQ](#faq)
+    - [During SFTP connection building, it prompts "REMOTE HOST IDENTIFICATION HAS CHANGED and Host key verification failed"](#remote-host-id-update)
+    - [When synchronizing the code to the remote server, it prompts "All configured authentication methods failed"](#the-configured-authentication-method-failed)
+    - [How to call the serial port and network port of IG902 during development](#how-to-call-the-serial-port-and-network-port-of-ig900)
+    - [When creating an SFTP connection with MobiusPi, it prompts "SSH error"](#ssh-error-when-setting-up-sftp-connection-with-mobiuspi)
 
 <a id="build-a-mobiuspi-development-environment"> </a>  
 
@@ -61,7 +65,7 @@ Before starting development, ensure that you get the following items ready:
 If your MobiusPi and PC have met all the above items, skip this section. Otherwise, prepare a development environment as follows.
 
 - [1.1 Prepare the hardware and network environment](#prepare-the-hardware-and-network-environment)
-- [1.2 Install required software on the PC](#install-required-software-on-the-pc)
+- [1.2 Prepare the PC environment](#install-required-software-on-the-pc)
 - [1.3 Prepare the VS Code development environment](#prepare-the-vs-code-development-environment)
 
 <a id="prepare-the-hardware-and-network-environment"> </a>  
@@ -69,8 +73,8 @@ If your MobiusPi and PC have met all the above items, skip this section. Otherwi
 ### 1.1 Prepare the hardware and network environment
 
 - [1.1.1 Connect the power supply and use a network cable to connect the platform to the PC](#connect-the-power-supply-and-use-a-network-cable-to-connect-the-platform-to-the-pc)
-- [1.1.2 Configure the LAN parameters](#configure-the-lan-parameters)
-- [1.1.3 Configure the WAN parameters](#configure-the-wan-parameters)
+- [1.1.2 Acess the MobiusPi](#configure-the-lan-parameters)
+- [1.1.3 Connect MobiusPi to the Internet](#configure-the-wan-parameters)
 - [1.1.4 Update the software version](#update-the-software-version)
 - [1.1.5 Enable the debugging mode for MobiusPi](#enable-the-debugging-mode-for-mobiuspi)
 
@@ -92,17 +96,17 @@ If your MobiusPi and PC have met all the above items, skip this section. Otherwi
 
 <a id="configure-the-lan-parameters"> </a>  
 
-#### 1.1.2 Configure the LAN parameters
+#### 1.1.2 Acess the MobiusPi
 
-- Configure the IG501 LAN parameters by referring to [Access IG501 in a LAN](http://manual.ig.inhandnetworks.com/en/latest/IG501-Quick-Start-Manual.html#set-lan-parameters-access-the-ig501-through-lan).
-- Configure the IG902 LAN parameters by referring to [Access IG902 in a LAN](http://manual.ig.inhandnetworks.com/en/latest/IG902-Quick-Start-Manual.html#set-lan-parameters-access-the-ig902-through-lan).
+- Acess the IG501 by referring to [Access the IG501](http://manual.ig.inhandnetworks.com/en/latest/IG501-Quick-Start-Manual.html#set-lan-parameters-access-the-ig501-through-lan).
+- Acess the IG902 by referring to [Access the IG902](http://manual.ig.inhandnetworks.com/en/latest/IG902-Quick-Start-Manual.html#set-lan-parameters-access-the-ig902-through-lan).
 
 <a id="configure-the-wan-parameters"> </a>  
 
-#### 1.1.3 Configure the WAN parameters
+#### 1.1.3 Connect MobiusPi to the Internet
 
-- Configure the IG501 WAN parameters by referring to [Connect IG501 to the Internet](http://manual.ig.inhandnetworks.com/en/latest/IG501-Quick-Start-Manual.html#set-wan-parameters-connect-ig501-to-the-internet).
-- Configure the IG902 WAN parameters by referring to [Connect IG902 to the Internet](http://manual.ig.inhandnetworks.com/en/latest/IG902-Quick-Start-Manual.html#set-wan-parameters-connect-ig902-to-the-internet).
+- Connect IG501 to the Internet by referring to [Connect IG501 to the Internet](http://manual.ig.inhandnetworks.com/en/latest/IG501-Quick-Start-Manual.html#set-wan-parameters-connect-ig501-to-the-internet).
+- Connect IG902 to the Internet by referring to [Connect IG902 to the Internet](http://manual.ig.inhandnetworks.com/en/latest/IG902-Quick-Start-Manual.html#set-wan-parameters-connect-ig902-to-the-internet).
 
 <a id="update-the-software-version"> </a>  
 
@@ -124,7 +128,7 @@ To run and debug Python code on MobiusPi during development, you need to enable 
 
 <a id="install-required-software-on-the-pc"> </a>  
 
-### 1.2 Install required software on the PC
+### 1.2 Prepare the PC environment
 
 - [1.2.1 Install the Python interpreter](#install-the-python-interpreter)
 - [1.2.2 Install Visual Studio Code](#install-visual-studio-code)
@@ -284,7 +288,7 @@ Select a required Python interpreter. In this document, the Python 3.7.X interpr
 
 <a id="compile-the-first-mobiuspi-app-hello-world"> </a>  
 
-## 2. Compile the first MobiusPi App: Hello World
+## 2. Compile the MobiusPi App: Hello World
 
 This document takes the **HelloWorld** App as an example to describe how to develop MobiusPi Python Apps in VS Code. This App can print a "hello world!" log every 10s in MobiusPi and allows you to import the configuration file and modify the log.
 
@@ -603,7 +607,7 @@ To improve the encoding efficiency, you can implement automatic code completion 
 
 <a id="remote-host-id-update"> </a>
 
-- Q1: During SFTP connection building, it prompts "REMOTE HOST IDENTIFICATION HAS CHANGED and Host key verification failed". What should I do?
+### Q1: During SFTP connection building, it prompts "REMOTE HOST IDENTIFICATION HAS CHANGED and Host key verification failed". What should I do?
   
   ![](images/2020-05-26-11-30-03.png)
   
@@ -617,7 +621,7 @@ To improve the encoding efficiency, you can implement automatic code completion 
 
 <a id="the-configured-authentication-method-failed"> </a>
 
-- Q2: After the SFTP connection is created, right-click on a blank area and choose **Sync Local > Remote** to synchronize the code to the remote server. It prompts "All configured authentication methods failed". What should I do?
+### Q2: After the SFTP connection is created, right-click on a blank area and choose **Sync Local > Remote** to synchronize the code to the remote server. It prompts "All configured authentication methods failed". What should I do?
   
   ![](images/2020-01-03-14-36-41.png)
   
@@ -625,13 +629,13 @@ To improve the encoding efficiency, you can implement automatic code completion 
 
 <a id="how-to-call-the-serial-port-and-network-port-of-ig900"> </a>
 
-- Q3: How to call the serial port and network port of IG902 during development?
+### Q3: How to call the serial port and network port of IG902 during development?
   
   A3: The RS485 serial port name is `/dev/ttyO3` and the RS232 serial port name is `/dev/ttyO1`. The serial port and network port can be called with the standard Python serial port/network port usage. For example, use the `pyserial` library to call the serial port.
 
 <a id="ssh-error-when-setting-up-sftp-connection-with-mobiuspi"> </a>
 
-- Q4: When creating an SFTP connection with MobiusPi, it prompts "SSH error", as shown in the following figure. What should I do?
+### Q4: When creating an SFTP connection with MobiusPi, it prompts "SSH error", as shown in the following figure. What should I do?
   
   ![](images/2020-04-21-20-11-13.png)
   
