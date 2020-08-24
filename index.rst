@@ -48,6 +48,6 @@ MobiusPi is a secondary development platform for the InGateway series.
    :maxdepth: 2
    :caption: Developer Guide
 
-   MobiusPi Python QuickStart-EN.md
+   MobiusPi-Python-QuickStart-EN.md
    API-manual-EN.md
 
