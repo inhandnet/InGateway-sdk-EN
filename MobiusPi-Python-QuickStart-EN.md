@@ -98,15 +98,15 @@ If your MobiusPi and PC have met all the above items, skip this section. Otherwi
 
 #### 1.1.2 Acess the MobiusPi
 
-- Acess the IG501 by referring to [Access the IG501](http://manual.ig.inhandnetworks.com/en/latest/IG501-Quick-Start-Manual.html#set-lan-parameters-access-the-ig501-through-lan).
-- Acess the IG902 by referring to [Access the IG902](http://manual.ig.inhandnetworks.com/en/latest/IG902-Quick-Start-Manual.html#set-lan-parameters-access-the-ig902-through-lan).
+- Acess the IG501 by referring to [Access the IG501](http://manual.ig.inhandnetworks.com/en/latest/IG501-Quick-Start-Manual.html#set-lan-parameters).
+- Acess the IG902 by referring to [Access the IG902](http://manual.ig.inhandnetworks.com/en/latest/IG902-Quick-Start-Manual.html#set-lan-parameters).
 
 <a id="configure-the-wan-parameters"> </a>  
 
 #### 1.1.3 Connect MobiusPi to the Internet
 
-- Connect IG501 to the Internet by referring to [Connect IG501 to the Internet](http://manual.ig.inhandnetworks.com/en/latest/IG501-Quick-Start-Manual.html#set-wan-parameters-connect-ig501-to-the-internet).
-- Connect IG902 to the Internet by referring to [Connect IG902 to the Internet](http://manual.ig.inhandnetworks.com/en/latest/IG902-Quick-Start-Manual.html#set-wan-parameters-connect-ig902-to-the-internet).
+- Connect IG501 to the Internet by referring to [Connect IG501 to the Internet](http://manual.ig.inhandnetworks.com/en/latest/IG501-Quick-Start-Manual.html#set-wan-parameters).
+- Connect IG902 to the Internet by referring to [Connect IG902 to the Internet](http://manual.ig.inhandnetworks.com/en/latest/IG902-Quick-Start-Manual.html#set-wan-parameters).
 
 <a id="update-the-software-version"> </a>  
 
