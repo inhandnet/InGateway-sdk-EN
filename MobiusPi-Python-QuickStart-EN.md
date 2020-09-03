@@ -406,21 +406,32 @@ To debug the code remotely, upload the local code to the remote server (MobiusPi
   ![](images/2020-01-02-18-25-11.png)
 
 - Step 2: Debug the script in the TERMINAL window.
-  
-  After the code is synchronized, in the TERMINAL window, enter the following command to execute the script on IG501 immediately. After the script is executed, you can view the execution result in the TERMINAL window: the log "hello world!" is printed.
-  
-  ```
-  python -m ptvsd --host 192.168.1.1 --port 3000 HelloWorld/src/main.py 
-  ```
-  
-  - `192.168.1.1` is the IP address of the **host** configured in `sftp.json`.
-  - `3000` is the recommended debugging port number.
-  - `HelloWorld/src/main.py` is the execution path of `mian.py`, which can be adjusted as needed.
-  
-  MobiusPi's Python development environment provides the ptvsd dependency library for remote code debugging. For more information about the ptvsd plug-in, see [ptvsd user manual](https://github.com/microsoft/ptvsd/).
-  
-  ![](images/2020-01-02-18-27-40.png)
+  - Method 1: Use ptvsd to debug the script
 
+    After the code is synchronized, in the TERMINAL window, enter the following command to execute the script on IG501 immediately. After the script is executed, you can view the execution result in the TERMINAL window: the log "hello world!" is printed.<font color=#FF0000> Note: MobiusPi's Python development environment does not provide ptvsd dependent libraries by default, you can refer to [2.8.2 Install the third-party dependency library to SDK](#install-the-third-party-dependency-library-to-sdk) to install it yourself</font>   
+  
+    ```
+    python -m ptvsd --host 192.168.1.1 --port 3000 HelloWorld/src/main.py 
+    ```
+  
+    - `192.168.1.1` is the IP address of the **host** configured in `sftp.json`.
+    - `3000` is the recommended debugging port number.
+    - `HelloWorld/src/main.py` is the execution path of `mian.py`, which can be adjusted as needed.
+  
+    For more information about the ptvsd plug-in, see [ptvsd user manual](https://github.com/microsoft/ptvsd/).
+  
+    ![](images/2020-01-02-18-27-40.png)  
+
+  - Method 2: Run the script directly
+    
+    After the code is synchronized, in the TERMINAL window, enter the following command to execute the script on IG501 immediately. After the script is executed, you can view the execution result in the TERMINAL window: the log "hello world!" is printed. (`HelloWorld/src/main.py` is the execution path of `mian.py`, which can be adjusted as needed.)  
+
+    ```
+    python HelloWorld/src/main.py 
+    ```
+
+    ![](images/2020-09-03-17-19-29.png)   
+    
 - Step 3: After debugging, press `Ctrl + C` on the terminal to terminate the debugging process.
   
   ![](images/2020-05-26-10-58-49.png)
