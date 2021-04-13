@@ -1,6 +1,6 @@
 # **Quick Start for MobiusPi Python Development**
 
-The InGateway series of Beijing InHand Networks Technology Co., Ltd. (InHand) consists of InGateway902 (referred to as **IG902** hereinafter) and InGateway501 (referred to as **IG501** hereinafter).  </br> MobiusPi is a secondary development platform for the InGateway series. This document describes how to perform Python-based secondary development on MobiusPi.
+The InGateway series of Beijing InHand Networks Technology Co., Ltd. (InHand) consists of InGateway902 (referred to as **IG902** hereinafter), InGateway502 (referred to as **IG502** hereinafter) and InGateway501 (referred to as **IG501** hereinafter).  </br> MobiusPi is a secondary development platform for the InGateway series. This document describes how to perform Python-based secondary development on MobiusPi.
 
   - [1. Build a MobiusPi development environment](#build-a-mobiuspi-development-environment)
     - [1.1 Prepare the hardware and network environment](#prepare-the-hardware-and-network-environment)
@@ -50,6 +50,10 @@ Before starting development, ensure that you get the following items ready:
     - Firmware version: V2.0.0.r12351 or later
     - SDK version: py2sdk-V1.3.4 or later
     - The network is connected and the debugging mode is enabled.
+  - InGateway502
+    - Firmware version: V2.0.0.r13771 or later
+    - SDK version: py3sdk-V1.3.5 or later
+    - The network is connected and the debugging mode is enabled.
   - InGateway902
     - Firmware version: V2.0.0.r12537 or later
     - SDK version: py3sdk-V1.3.5 or later
@@ -88,6 +92,12 @@ If your MobiusPi and PC have met all the above items, skip this section. Otherwi
   
   ![](images/2020-02-20-09-23-14.png)
 
+- Prepare the IG502 hardware
+  
+  Power on IG502 and connect the PC and IG502 through an Ethernet cable according to the topology.
+  
+  ![](images/2021-04-06-19-32-02.png)
+
 - Prepare the IG902 hardware
   
   Power on IG902 and connect the PC and IG902 through an Ethernet cable according to the topology.
@@ -106,6 +116,7 @@ If your MobiusPi and PC have met all the above items, skip this section. Otherwi
 #### 1.1.3 Connect MobiusPi to the Internet
 
 - Connect IG501 to the Internet by referring to [Connect IG501 to the Internet](http://manual.ig.inhandnetworks.com/en/latest/IG501-Quick-Start-Manual.html#set-wan-parameters).
+- Connect IG502 to the Internet by referring to [Connect IG502 to the Internet](http://manual.ig.inhandnetworks.com/en/latest/IG502-Quick-Start-Manual.html#set-wan-parameters).
 - Connect IG902 to the Internet by referring to [Connect IG902 to the Internet](http://manual.ig.inhandnetworks.com/en/latest/IG902-Quick-Start-Manual.html#set-wan-parameters).
 
 <a id="update-the-software-version"> </a>  
@@ -115,6 +126,7 @@ If your MobiusPi and PC have met all the above items, skip this section. Otherwi
 If you want to get the latest MobiusPi and its functional characteristics, contact Customer Services. To update the software version, see the following links:
 
 - [Update the IG501 software version](http://manual.ig.inhandnetworks.com/en/latest/IG501-Quick-Start-Manual.html#update-the-software)
+- [Update the IG502 software version](http://manual.ig.inhandnetworks.com/en/latest/IG502-Quick-Start-Manual.html#update-the-software)
 - [Update the IG902 software version](http://manual.ig.inhandnetworks.com/en/latest/IG902-Quick-Start-Manual.html#update-the-software)
 
 <a id="enable-the-debugging-mode-for-mobiuspi"> </a>  
@@ -124,6 +136,7 @@ If you want to get the latest MobiusPi and its functional characteristics, conta
 To run and debug Python code on MobiusPi during development, you need to enable the debugging mode for MobiusPi.
 
 - [Enable the IG501 debugging mode](http://manual.ig.inhandnetworks.com/en/latest/IG501-Quick-Start-Manual.html#enable-the-debug-mode)
+- [Enable the IG502 debugging mode](http://manual.ig.inhandnetworks.com/en/latest/IG502-Quick-Start-Manual.html#enable-the-debug-mode)
 - [Enable the IG902 debugging mode](http://manual.ig.inhandnetworks.com/en/latest/IG902-Quick-Start-Manual.html#enable-the-debug-mode)
 
 <a id="install-required-software-on-the-pc"> </a>  
@@ -360,6 +373,12 @@ To debug the code remotely, upload the local code to the remote server (MobiusPi
     
     ![](images/2020-05-26-10-27-30.png)
   
+  - Configure the SFTP connection for IG502
+    
+    In the `sftp.json` file, configure the SFTP connection according to the connection parameters on the **Edge Computing > Python Edge Computing** page. <font color=#FF0000>Note: The Python App name must be same to that in `mian.py`.</font>
+    
+    ![](images/2021-04-06-19-37-23.png)
+
   - Configure the SFTP connection for IG902
     
     In the `sftp.json` file, configure the SFTP connection according to the connection parameters on the **Edge Computing > Python Edge Computing** page. <font color=#FF0000>Note: The Python App name must be same to that in `mian.py`.</font>
@@ -408,7 +427,7 @@ To debug the code remotely, upload the local code to the remote server (MobiusPi
 - Step 2: Debug the script in the TERMINAL window.
   - Method 1: Use ptvsd to debug the script
 
-    After the code is synchronized, in the TERMINAL window, enter the following command to execute the script on IG501 immediately. After the script is executed, you can view the execution result in the TERMINAL window: the log "hello world!" is printed.<font color=#FF0000> Note: MobiusPi's Python development environment does not provide ptvsd dependent libraries by default, you can refer to [2.8.2 Install the third-party dependency library to SDK](#install-the-third-party-dependency-library-to-sdk) to install it yourself</font>   
+    After the code is synchronized, in the TERMINAL window, enter the following command to execute the script on MobiusPi immediately (take IG501 as an example). After the script is executed, you can view the execution result in the TERMINAL window: the log "hello world!" is printed.<font color=#FF0000> Note: MobiusPi's Python development environment does not provide ptvsd dependent libraries by default, you can refer to [2.8.2 Install the third-party dependency library to SDK](#install-the-third-party-dependency-library-to-sdk) to install it yourself</font>   
   
     ```
     python -m ptvsd --host 192.168.1.1 --port 3000 HelloWorld/src/main.py 
@@ -465,6 +484,7 @@ After debugging, you can build an App release package to quickly deploy the App 
 Run the `main.py` script. Or, after the App release package is built, the App is automatically generated on the connected MobiusPi, but this App cannot be started. Refer to the following links to deploy the App to MobiusPi:
 
 - [Deploy an App on IG501](http://manual.ig.inhandnetworks.com/en/latest/IG501-Quick-Start-Manual.html#install-and-run-python-app)
+- [Deploy an App on IG502](http://manual.ig.inhandnetworks.com/en/latest/IG502-Quick-Start-Manual.html#install-and-run-python-app)
 - [Deploy an App on IG902](http://manual.ig.inhandnetworks.com/en/latest/IG902-Quick-Start-Manual.html#install-and-run-python-app)
 
 <a id="view-the-app-running-status"> </a>  
@@ -642,7 +662,7 @@ To improve the encoding efficiency, you can implement automatic code completion 
 
 ### Q3: How to call the serial port and network port of MobiusPi?
   
-  A3: The RS485 serial port name of IG902 is `/dev/ttyO3` and the RS232 serial port name is `/dev/ttyO1`; The RS485 serial port name of IG501 is `/dev/ttyO1` and the RS232 serial port name is `/dev/ttyO5`. The serial port and network port can be called with the standard Python serial port/network port usage. For example, use the `pyserial` library to call the serial port.
+  A3: The RS485 serial port name of IG902 is `/dev/ttyO3` and the RS232 serial port name is `/dev/ttyO1`; The RS485 serial port name of IG502 is `/dev/ttyO3` and the RS232 serial port name is `/dev/ttyO1`; The RS485 serial port name of IG501 is `/dev/ttyO1` and the RS232 serial port name is `/dev/ttyO5`. The serial port and network port can be called with the standard Python serial port/network port usage. For example, use the `pyserial` library to call the serial port.
 
 <a id="ssh-error-when-setting-up-sftp-connection-with-mobiuspi"> </a>
 
