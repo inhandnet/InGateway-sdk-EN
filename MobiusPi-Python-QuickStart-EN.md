@@ -123,7 +123,7 @@ If your MobiusPi and PC have met all the above items, skip this section. Otherwi
 
 #### 1.1.4 Update the software version
 
-If you want to get the latest MobiusPi and its functional characteristics, contact Customer Services. To update the software version, see the following links:
+If you want to get the latest MobiusPi and its functional characteristics, please visit the [Resource](https://www.inhandnetworks.com/downlist/cid-148/). To update the software version, see the following links:
 
 - [Update the IG501 software version](http://manual.ig.inhandnetworks.com/en/latest/IG501-Quick-Start-Manual.html#update-the-software)
 - [Update the IG502 software version](http://manual.ig.inhandnetworks.com/en/latest/IG502-Quick-Start-Manual.html#update-the-software)
